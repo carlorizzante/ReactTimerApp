@@ -22,7 +22,7 @@ module.exports = {
   resolve: {
     root: __dirname,
     alias: {
-      // Greeter: "public/components/Greeter.jsx", // example
+      Clock: "app/components/Clock.jsx"
       // openWeatherMap: "app/api/openWeatherMap.js" // Example API
     },
     extensions: ["", ".js", ".jsx"]

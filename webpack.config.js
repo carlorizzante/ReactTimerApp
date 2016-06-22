@@ -23,7 +23,8 @@ module.exports = {
     root: __dirname,
     alias: {
       Clock: "app/components/Clock.jsx",
-      CountdownForm: "app/components/CountdownForm.jsx"
+      CountdownForm: "app/components/CountdownForm.jsx",
+      Countdown: "app/components/Countdown.jsx"
       // openWeatherMap: "app/api/openWeatherMap.js" // Example API
     },
     extensions: ["", ".js", ".jsx"]

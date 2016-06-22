@@ -38,8 +38,8 @@ describe("Clock", () => {
       var time = 62;
       var expected = "01:02";
       var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={time}/>);
-      var $clock = $(ReactDOM.findDOMNode(clock));
-      var actual = $clock.find(".clock-timer").text();
+      var $el = $(ReactDOM.findDOMNode(clock));
+      var actual = $el.find(".clock-timer").text();
       expect(actual).toBe(expected);
     });
   });

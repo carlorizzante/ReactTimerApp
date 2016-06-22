@@ -1,0 +1,15 @@
+.clock-container {
+  display: flex;
+  margin: 4rem auto;
+  width: $clock-size;
+  height: $clock-size;
+  border-radius: $clock-size;
+  // text-align: center;
+  align-items: center;
+  // vertical-align: middle;
+  justify-content: center;
+}
+
+.clock-timer {
+  // display: block;
+}

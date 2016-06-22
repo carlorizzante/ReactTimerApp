@@ -34,3 +34,12 @@ h1.page-title {
 input[type=search] {
   box-shadow: none;
 }
+
+.clock-container {
+  border: $clock-border-thickness $clock-border-style $clock-border-color;
+}
+
+.clock-timer {
+    font-size: 2.5rem;
+    font-weight: 300;
+}

@@ -32,4 +32,16 @@ describe("Clock", () => {
       expect(actual).toBe(expected);
     });
   });
+
+  describe("render", () => {
+    it("should render clock to output", () => {
+      var time = 62;
+      var expected = "01:02";
+      var clock = TestUtils.renderIntoDocument(<Clock totalSeconds={time}/>);
+      var $clock = $(ReactDOM.findDOMNode(clock));
+      var actual = $clock.find(".clock-timer").text();
+      expect(actual).toBe(expected);
+    });
+  });
+
 });

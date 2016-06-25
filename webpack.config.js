@@ -24,7 +24,8 @@ module.exports = {
     alias: {
       Clock: "app/components/Clock.jsx",
       CountdownForm: "app/components/CountdownForm.jsx",
-      Countdown: "app/components/Countdown.jsx"
+      Countdown: "app/components/Countdown.jsx",
+      Controls: "app/components/Controls.jsx",
       // openWeatherMap: "app/api/openWeatherMap.js" // Example API
     },
     extensions: ["", ".js", ".jsx"]

@@ -38,5 +38,25 @@ describe("Countdown", () => {
         done();
       }, 4100);
     });
+
+    it("should maintain status (paused) when paused", (done) => {
+      countdown.handleSetCountdown(2); // restart countdown
+      countdown.handleStatusChange("paused"); // pause countdown (set status to paused)
+      setTimeout(() => {
+        expect(countdown.state.count).toBe(2);
+        expect(countdown.state.countdownStatus).toBe("paused");
+        done();
+      }, 1001);
+    });
+
+    it("should reset count when stopped", (done) => {
+      countdown.handleSetCountdown(3); // restart countdown
+      countdown.handleStatusChange("stopped"); // stop countdown
+      setTimeout(() => {
+        expect(countdown.state.count).toBe(0);
+        expect(countdown.state.countdownStatus).toBe("stopped");
+        done();
+      }, 1001);
+    });
   });
 });

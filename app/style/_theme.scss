@@ -25,10 +25,12 @@ a.active-menu-link {
   font-weight: bold;
 }
 
-h1.page-title {
+.page-title {
   margin-top: 3rem;
   margin-bottom: 3rem;
   color: $title-color;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 input[type=search] {

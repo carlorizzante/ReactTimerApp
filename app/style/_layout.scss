@@ -13,3 +13,25 @@
 .clock-timer {
   // display: block;
 }
+
+.controls-container {
+  > .button {
+    width: 46%;
+  }
+  > .button:first-child {
+    margin-right: 1rem;
+  }
+}
+
+// .controls-container {
+//   display: flex;
+//   justify-content: center;
+//
+//   > .button {
+//     padding: 0.75rem 3rem;;
+//   }
+//
+//   > .button:first-child {
+//     margin-right: 1.5rem;
+//   }
+// }

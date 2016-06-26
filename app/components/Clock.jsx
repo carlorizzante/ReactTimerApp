@@ -1,5 +1,4 @@
 var React = require("react");
-var Controls = require("Controls");
 
 var Clock = React.createClass({
   getDefaultProps: function () {

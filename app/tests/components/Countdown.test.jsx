@@ -8,7 +8,7 @@ var Countdown = require("Countdown");
 
 describe("Countdown", () => {
   it("should exist", () => {
-    expect("Countdown").toExist();
+    expect(Countdown).toExist();
   });
 
   var countdown = TestUtils.renderIntoDocument(<Countdown />);

@@ -17,7 +17,7 @@ describe("Countdown", () => {
   describe("handleSetCountdown", () => {
     it("should set state and start counting down to zero", (done) => {
       expect(countdown.state.count).toBe(2);
-      expect(countdown.state.countdownStatus).toBe("started");
+      expect(countdown.state.clockStatus).toBe("started");
       setTimeout(() => {
         expect(countdown.state.count).toBe(1);
         done();
@@ -27,7 +27,7 @@ describe("Countdown", () => {
     it("should set state to stopped once count reaches zero", (done) => {
       setTimeout(() => {
         expect(countdown.state.count).toBe(0);
-        expect(countdown.state.countdownStatus).toBe("stopped");
+        expect(countdown.state.clockStatus).toBe("stopped");
         done();
       }, 2100);
     });
@@ -44,7 +44,7 @@ describe("Countdown", () => {
       countdown.handleStatusChange("paused"); // pause countdown (set status to paused)
       setTimeout(() => {
         expect(countdown.state.count).toBe(2);
-        expect(countdown.state.countdownStatus).toBe("paused");
+        expect(countdown.state.clockStatus).toBe("paused");
         done();
       }, 1001);
     });
@@ -54,7 +54,7 @@ describe("Countdown", () => {
       countdown.handleStatusChange("stopped"); // stop countdown
       setTimeout(() => {
         expect(countdown.state.count).toBe(0);
-        expect(countdown.state.countdownStatus).toBe("stopped");
+        expect(countdown.state.clockStatus).toBe("stopped");
         done();
       }, 1001);
     });

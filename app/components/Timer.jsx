@@ -15,18 +15,18 @@ var Timer = React.createClass({
       switch(this.state.clockStatus) {
 
         case "started":
-          console.log("Timer started");
+          // console.log("Timer started");
           this.startTimer();
           break;
 
         case "stopped":
-          console.log("Timer reset");
+          // console.log("Timer reset");
           this.setState({
             count: 0
           });
 
         case "paused":
-          console.log("Timer paused");
+          // console.log("Timer paused");
           clearInterval(this.timer);
           this.timer = null;
           break;
@@ -38,7 +38,7 @@ var Timer = React.createClass({
     }
   },
   componentWillUnmount: function () {
-    console.log("Timer component will unmount");
+    // console.log("Timer component will unmount");
     this.setState({
       count: 0
     });

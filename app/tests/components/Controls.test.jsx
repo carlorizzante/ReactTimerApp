@@ -11,16 +11,18 @@ describe("Controls", () => {
     expect(Controls).toExist();
   });
 
+  var fn = function () {}; // Empty fn, required by Control for onStatusChange property
+
   describe("render", () => {
     it("should render pause btn when started", () => {
-      var controls = TestUtils.renderIntoDocument(<Controls clockStatus="started"/>);
+      var controls = TestUtils.renderIntoDocument(<Controls clockStatus="started" onStatusChange={fn}/>);
       var $el = $(ReactDOM.findDOMNode(controls));
       var $pauseBtn = $el.find('button:contains(Pause)');
       expect($pauseBtn.length).toBe(1);
     });
 
     it("should render start btn when paused", () => {
-      var controls = TestUtils.renderIntoDocument(<Controls clockStatus="paused"/>);
+      var controls = TestUtils.renderIntoDocument(<Controls clockStatus="paused" onStatusChange={fn}/>);
       var $el = $(ReactDOM.findDOMNode(controls));
       var $startBtn = $el.find('button:contains(Start)');
       expect($startBtn.length).toBe(1);
